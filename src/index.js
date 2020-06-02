@@ -4,6 +4,7 @@ import { Provider, ReactReduxContext } from 'react-redux';
 
 import createStore from './store';
 import rootReducer from './reducers';
+import Router from './router';
 
 import './less/index.less';
 
@@ -17,7 +18,7 @@ const store = createStore(rootReducer, {
 const render = () => {
   ReactDOM.render(
     <Provider store={store} context={ReactReduxContext}>
-      <div>Hello React with Redux</div>
+      <Router context={ReactReduxContext} />
     </Provider>,
     document.getElementById('root'),
   );

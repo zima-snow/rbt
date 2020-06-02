@@ -8,7 +8,9 @@ export default (reducers = {}, persistedState = {}) => {
     middlewares = [...middlewares, createLogger()];
   }
 
-  const composedMiddleware = compose(applyMiddleware(...middlewares));
+  // eslint-disable-next-line no-underscore-dangle
+  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  const composedMiddleware = composeEnhancers(applyMiddleware(...middlewares));
 
   const store = createStore(combineReducers({ ...reducers }), persistedState, composedMiddleware);
 
