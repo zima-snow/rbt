@@ -4,7 +4,9 @@
   "description": "First SPA with React Redux Redux Saga",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.develop.config.js --progress --colors",
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
     "@babel/preset-react": "^7.10.1",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
     "eslint": "^7.1.0",
     "eslint-config-airbnb": "^18.1.0",
@@ -33,6 +36,7 @@
     "eslint-plugin-react-hooks": "^4.0.4",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "less": "^3.11.2",
     "less-loader": "^6.1.0",
     "mini-css-extract-plugin": "^0.9.0",
     "prettier": "^2.0.5",
@@ -40,5 +44,14 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "bem-cn-fast": "^1.0.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6"
   }
 }
