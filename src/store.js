@@ -1,8 +1,10 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { createLogger } from 'redux-logger';
+import createSagaMiddleware from 'redux-saga';
 
 export default (reducers = {}, persistedState = {}) => {
-  let middlewares = [];
+  const sagaMiddleware = createSagaMiddleware();
+  let middlewares = [sagaMiddleware];
 
   if (process.env.NODE_ENV !== 'production') {
     middlewares = [...middlewares, createLogger()];
@@ -14,6 +16,7 @@ export default (reducers = {}, persistedState = {}) => {
 
   const store = createStore(combineReducers({ ...reducers }), persistedState, composedMiddleware);
 
+  store.runSaga = sagaMiddleware.run;
   store.injectedReducers = reducers;
 
   if (module.hot) {

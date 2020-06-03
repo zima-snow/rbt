@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.develop.config.js --progress --colors",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "server-cli": "./node_modules/.bin/json-server --watch ./server/db.json --routes ./server/routes.json --id _id"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/zima-snow/rbt#readme",
   "devDependencies": {
     "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
     "babel-eslint": "^10.1.0",
@@ -46,8 +48,11 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@babel/runtime": "^7.10.2",
+    "axios": "^0.19.2",
     "bem-cn-fast": "^1.0.2",
     "history": "^4.10.1",
+    "json-server": "^0.16.1",
     "lodash.get": "^4.4.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -55,6 +60,7 @@
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^1.1.3"
   }
 }

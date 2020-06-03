@@ -1,4 +1,4 @@
 import registrySelector from './registry';
+import entitiesSelector from './entities';
 
-// eslint-disable-next-line import/prefer-default-export
-export { registrySelector };
+export { registrySelector, entitiesSelector };

@@ -1,4 +1,4 @@
-import DesignsPage from '../pages/designs';
+import DesignsPageContainer from '../pages/designs';
 
 import { MainLayout } from '../layouts';
 
@@ -9,7 +9,7 @@ export default {
     path: '/designs',
     exact: true,
     title: 'Designs',
-    component: DesignsPage,
+    component: DesignsPageContainer,
     layout: MainLayout,
     onEnterAction: rbtShowPage('designs', 'show'),
   },
