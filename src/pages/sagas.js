@@ -1,5 +1,5 @@
-import { designsSaga } from './designs/sagas';
+import { designsSaga, designsFilterSaga } from './designs/sagas';
 
-const sagas = [designsSaga];
+const sagas = [designsSaga, designsFilterSaga];
 
 export default sagas;

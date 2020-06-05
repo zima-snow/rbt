@@ -1,10 +1,13 @@
 import { takeLatest } from 'redux-saga/effects';
 
-import { DESIGNS_PAGE_OPEN } from '../actions';
+import { DESIGNS_PAGE_OPEN, DESIGNS_PAGE_GET_BATCH_DATA } from '../actions';
 
-import { handleDesigns } from './designs';
+import { handleDesigns, handleDesignsByFilter } from './designs';
 
-// eslint-disable-next-line import/prefer-default-export
 export function* designsSaga() {
   yield takeLatest([DESIGNS_PAGE_OPEN], handleDesigns);
+}
+
+export function* designsFilterSaga() {
+  yield takeLatest([DESIGNS_PAGE_GET_BATCH_DATA], handleDesignsByFilter);
 }

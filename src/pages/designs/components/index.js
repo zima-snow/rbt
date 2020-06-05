@@ -1,4 +1,4 @@
 import DesignListItem from './design-list-item';
+import DesignFilter from './design-filter';
 
-// eslint-disable-next-line import/prefer-default-export
-export { DesignListItem };
+export { DesignListItem, DesignFilter };

@@ -51,6 +51,7 @@
     "@babel/runtime": "^7.10.2",
     "axios": "^0.19.2",
     "bem-cn-fast": "^1.0.2",
+    "classnames": "^2.2.6",
     "history": "^4.10.1",
     "json-server": "^0.16.1",
     "lodash.get": "^4.4.2",
